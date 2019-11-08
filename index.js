@@ -20,7 +20,7 @@ $(function addItem() {
           </button>
         </div>
       </li>`
-
+            
         $('ul').append(newitem);
        
 
@@ -39,11 +39,14 @@ $(function deleteItem(){
 
 $(function checkItem(){
 
-   $('.shopping-item-toggle').on('click', function(event){
-  $(event.currentTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+  // $('.shopping-item-toggle').on('click', function(event){
+  //$(event.currentTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     //$('span.shopping-item').toggleClass();
+    
+    $('ul').on('click', '.shopping-item-toggle', function(event) {
+      $(event.currentTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');    });
 
-});
+//});
 });
 
 });
