@@ -22,7 +22,6 @@ $(function addItem() {
       </li>`
             
         $('ul').append(newitem);
-       
 
 });
 });
@@ -30,7 +29,7 @@ $(function addItem() {
 
 $(function deleteItem(){
 
-    $('.shopping-item-delete').on('click', function(event){
+    $('ul').on('click', '.shopping-item-delete', function(event){
         $( event.target ).closest( "li" ).remove();
 
     });
